@@ -12,13 +12,6 @@ add_library(Boost::histogram ALIAS boost_histogram)
 
 target_include_directories(boost_histogram INTERFACE include)
 target_compile_features(boost_histogram INTERFACE cxx_std_14)
-target_link_libraries(boost_histogram
-  INTERFACE
-    Boost::config
-    Boost::core
-    Boost::mp11
-    Boost::throw_exception
-    Boost::variant2)
 
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   # Standalone build, fetch dependencies
